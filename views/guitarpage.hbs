@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{{> navbar}}
+<body>
+    <h1>Guitar page</h1>
+    {{!-- <p>{{firstname}} {{lastname}}</p> --}}
+    {{#each guitars}}
+    <ul class="guitar">
+        <li>{{this.name}}</li>
+        <li>{{this.brand}}</li>
+        <li>{{this.price}}</li>
+        <li>{{this.color}}</li>
+        <li>{{this.material}}</li>
+        <button><a href="/delete/{{this.guitarId}}">Delete</a></button>
+        <button><a href="/update/{{this.guitarId}}">Update</a></button>
+    </ul>
+    {{/each}}
+</body>
+
+</html>

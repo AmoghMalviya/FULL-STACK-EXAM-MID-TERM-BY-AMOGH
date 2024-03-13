@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{{> navbar}}
+<body>
+    <h1>Update Guitar</h1>
+    <form action="/updateguitar" method="post">
+        <label for="">name:-</label>
+        <input type="text" name="name" id="name" value="{{updateguitar.name}}"><br>
+
+        <label for="type">Type:-</label>
+        <input type="text" name="type" id="type" value="{{updateguitar.type}}"><br>
+
+         <label for="color">Color:-</label>
+        <input type="text" name="color" id="color" value="{{updateguitar.color}}"><br>  
+
+        <label for="material">Material:-</label>
+        <input type="text" name="material" id="material" value="{{updateguitar.material}}"><br>
+
+        <label for="brand">Brand:-</label>
+        <input type="text" name="brand" id="brand" value="{{updateguitar.brand}}"><br>
+
+        <label for="price">Price:-</label>
+        <input type="text" name="price" id="price" value="{{updateguitar.price}}"><br>      
+        
+       <input type="hidden" name="guitarId" value="{{updateguitar.guitarId}}">
+        <button>submit</button>
+    </form>
+</body>
+
+</html>
